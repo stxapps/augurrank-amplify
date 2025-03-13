@@ -10,7 +10,23 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.config({
+    extends: [
+      "next/core-web-vitals", "next/typescript", "plugin:tailwindcss/recommended",
+    ],
+    "plugins": ["@stylistic"],
+    "rules": {
+      "prefer-const": [1],
+      "@stylistic/semi": [1, "always"],
+      "@stylistic/no-extra-semi": [1],
+      "@stylistic/comma-dangle": [1, "always-multiline"],
+      "@stylistic/quotes": [
+        1, "single", { "avoidEscape": true, "allowTemplateLiterals": true }
+      ],
+      "@stylistic/jsx-quotes": [1, "prefer-double"],
+      "react/no-unescaped-entities": [0]
+    },
+  }),
 ];
 
 export default eslintConfig;

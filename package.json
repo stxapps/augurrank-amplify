@@ -10,11 +10,11 @@
     "lint": "next lint --fix"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.6.0",
     "@stacks/encryption": "^7.0.4",
     "@stacks/network": "^7.0.2",
     "@stacks/transactions": "^7.0.4",
     "clsx": "^2.1.1",
+    "immer": "^10.1.1",
     "jsontokens": "^4.0.1",
     "motion": "^12.4.10",
     "next": "15.2.1",
@@ -22,6 +22,9 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
+    "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0",
+    "reselect": "^5.1.1",
     "sats-connect": "^3.2.0",
     "url-parse": "^1.5.10"
   },
@@ -32,6 +35,7 @@
     "@headlessui/react": "^2.2.0",
     "@headlessui/tailwindcss": "^0.2.2",
     "@heroicons/react": "^2.2.0",
+    "@redux-devtools/extension": "^3.3.0",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.16",
